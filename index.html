@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teens Summit Global</title>
+
+<meta name="description" content="Teens Summit Global inspires, educates and empowers young people through leadership, purpose and transformation.">
+
+<style>
+
+/* ==============================
+   GLOBAL STYLES
+================================ */
+
+:root {
+    --navy: #092d45;
+    --teal: #087f78;
+    --green: #65b64b;
+    --orange: #ef8b2c;
+    --cream: #f7f8f5;
+    --white: #ffffff;
+    --text: #183042;
+    --muted: #667785;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--text);
+    background: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button, input, select, textarea {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+}
+
+.container {
+    width: min(1160px, 92%);
+    margin: auto;
+}
+
+section {
+    padding: 55px 0;
+}
+
+/* ==============================
+   TOP BAR
+================================ */
+
+.topbar {
+    background: var(--navy);
+    color: white;
+    padding: 8px 0;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.topbar a {
+    margin-right: 15px;
+}
+
+/* ==============================
+   HEADER AND NAVIGATION
+================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    border: 3px solid var(--teal);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.brand-name strong {
+    display: block;
+    font-size: 14px;
+}
+
+.brand-name small {
+    display: block;
+    font-size: 10px;
+    color: var(--teal);
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav a {
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--teal);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 17px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn.teal {
+    background: var(--teal);
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* ==============================
+   HOMEPAGE SLIDER
+================================ */
+
+.hero {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    background: var(--navy);
+    color: white;
+}
+
+.slides {
+    position: absolute;
+    inset: 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(4,24,39,0.82),
+        rgba(4,24,39,0.25),
+        rgba(4,24,39,0.10)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 650px;
+    padding: 50px 0;
+}
+
+.eyebrow {
+    color: #ffbf72;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 14px;
+    max-width: 600px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #edf5f7;
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 4%;
+    z-index: 5;
+    display: flex;
+    gap: 8px;
+}
+
+.slider-controls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    cursor: pointer;
+}
+
+.dots {
+    position: absolute;
+    bottom: 28px;
+    left: 4%;
+    z-index: 5;
+    display: flex;
+    gap: 6px;
+}
+
+.dots button {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff70;
+    cursor: pointer;
+}
+
+.dots button.active {
+    background: var(--orange);
+    width: 22px;
+    border-radius: 10px;
+}
+
+/* ==============================
+   TICKER
+================================ */
+
+.ticker {
+    background: var(--teal);
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.ticker span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* ==============================
+   SECTION HEADINGS
+================================ */
+
+.section-head {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.section-head .eyebrow {
+    color: var(--teal);
+}
+
+.section-head h2 {
+    color: var(--navy);
+}
+
+.section-head p {
+    color: var(--muted);
+}
+
+/* ==============================
+   GRID AND CARDS
+================================ */
+
+.grid {
+    display: grid;
+    gap: 18px;
+}
+
+.grid.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.four {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    background: white;
+    border: 1px solid #e3e9e8;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 5px 20px rgba(9,45,69,0.04);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(7,36,54,0.12);
+}
+
+.card h3 {
+    color: var(--navy);
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: #e5f5f1;
+    color: var(--teal);
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+/* ==============================
+   ABOUT US
+================================ */
+
+.about {
+    background: var(--cream);
+}
+
+.about-panel {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.about-visual {
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+.about-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==============================
+   OUR PILLARS
+================================ */
+
+.pillars .card {
+    border-top: 3px solid var(--teal);
+}
+
+/* ==============================
+   VISION AND MISSION
+================================ */
+
+.vision {
+    background: var(--navy);
+    color: white;
+}
+
+.vision .section-head h2 {
+    color: white;
+}
+
+.vision .section-head p {
+    color: #d4e4eb;
+}
+
+.vision .card {
+    background: #123d55;
+    border-color: #24536b;
+}
+
+.vision .card h3 {
+    color: #ffbf72;
+}
+
+.vision .card p {
+    color: #e2edf1;
+}
+
+/* ==============================
+   PROGRAMMES
+================================ */
+
+.programme-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.programme-top {
+    padding: 20px 20px 0;
+}
+
+.programme-bottom {
+    padding: 0 20px 20px;
+}
+
+.programme-card .icon {
+    background: #fff1df;
+    color: #b86b17;
+}
+
+/* ==============================
+   ROADMAP
+================================ */
+
+.roadmap {
+    background: var(--cream);
+}
+
+.phase {
+    border-left: 3px solid var(--orange);
+    padding: 4px 0 4px 18px;
+}
+
+.phase strong {
+    display: block;
+    color: var(--teal);
+    margin-bottom: 5px;
+}
+
+/* ==============================
+   CALL TO ACTION
+================================ */
+
+.cta {
+    background: linear-gradient(120deg, var(--teal), var(--navy));
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta h2 {
+    color: white;
+}
+
+.cta p {
+    max-width: 650px;
+    margin: 0 auto 20px;
+    color: #e5f4f4;
+}
+
+/* ==============================
+   IMPACT
+================================ */
+
+.impact-stat {
+    background: var(--cream);
+    text-align: center;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.impact-stat strong {
+    display: block;
+    font-size: 14px;
+    color: var(--teal);
+}
+
+.impact-stat span {
+    color: var(--muted);
+}
+
+.quote {
+    background: #f8fbfa;
+    border-left: 3px solid var(--orange);
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.quote p {
+    font-style: italic;
+}
+
+.quote strong {
+    color: var(--teal);
+}
+
+/* ==============================
+   NEWS
+================================ */
+
+.news-card {
+    border-radius: 10px;
+    border: 1px solid #e3e9e8;
+    padding: 20px;
+}
+
+.news-card small {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.newsletter {
+    background: #eaf5f2;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+input, select, textarea {
+    border: 1px solid #d5e0df;
+    border-radius: 5px;
+    padding: 10px;
+    background: white;
+    color: var(--text);
+}
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    background: #061f31;
+    color: #dce9ef;
+    padding: 45px 0 18px;
+}
+
+footer h3 {
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+footer a {
+    display: block;
+    margin: 7px 0;
+    color: #c6d9e2;
+}
+
+footer a:hover {
+    color: #ffbf72;
+}
+
+.copyright {
+    border-top: 1px solid #244253;
+    margin-top: 30px;
+    padding-top: 15px;
+    text-align: center;
+    color: #a9c0cc;
+}
+
+/* ==============================
+   REGISTRATION MODAL
+================================ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #061f31b8;
+    display: none;
+    place-items: center;
+    z-index: 500;
+    padding: 18px;
+}
+
+.modal.open {
+    display: grid;
+}
+
+.modal-box {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: min(500px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-head button {
+    border: 0;
+    background: #edf2f2;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.form-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.form-grid label {
+    display: grid;
+    gap: 5px;
+    font-weight: bold;
+}
+
+/* ==============================
+   NOTIFICATION
+================================ */
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--navy);
+    color: white;
+    padding: 13px 18px;
+    border-radius: 7px;
+    display: none;
+    z-index: 600;
+}
+
+.toast.show {
+    display: block;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media(max-width: 900px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: white;
+        padding: 18px 4%;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .grid.four {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .hero,
+    .hero-content {
+        min-height: 420px;
+    }
+
+    .grid.two,
+    .grid.three,
+    .grid.four {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 42px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar .container {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ==============================
+     TOP BAR
+================================ -->
+
+<div class="topbar">
+    <div class="container">
+        <div>
+            <a href="#contact">✉ info@teenssummitglobal.org</a>
+            <a href="#contact">☎ Contact TSG</a>
+        </div>
+        <div>Inspire • Educate • Impact</div>
+    </div>
+</div>
+
+<!-- ==============================
+     HEADER
+================================ -->
+
+<header>
+    <div class="container nav-wrap">
+
+        <a class="brand" href="#home">
+            <span class="brand-mark">🌍</span>
+
+            <span class="brand-name">
+                <strong>TEENS SUMMIT GLOBAL</strong>
+                <small>INSPIRE. EDUCATE. IMPACT.</small>
+            </span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰ Menu
+        </button>
+
+        <nav id="mainNav">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#programmes">Programmes</a>
+            <a href="#impact">Our Impact</a>
+            <a href="#events">Events</a>
+            <a href="#news">News</a>
+            <button class="btn" data-open-modal>Get Involved</button>
+        </nav>
+
+    </div>
+</header>
+
+<!-- ==============================
+     HOMEPAGE
+================================ -->
+
+<section class="hero" id="home">
+
+    <div class="slides">
+
+        <div class="slide active">
+            <img src="assets/1000886905.jpg"
+            alt="Students praying at Akrofuom SHS">
+        </div>
+
+        <div class="slide">
+            <img src="assets/1000886906.jpg"
+            alt="Students in prayer">
+        </div>
+
+        <div class="slide">
+            <img src="assets/1000886902.jpg"
+            alt="Students participating in Mindshift">
+        </div>
+
+        <div class="slide">
+            <img src="assets/1000886901.jpg"
+            alt="Teens Summit Global school programme">
+        </div>
+
+        <div class="slide">
+            <img src="assets/1000886899.jpg"
+            alt="Asare Bediako SHS student awards">
+        </div>
+
+        <div class="slide">
+            <img src="assets/1000886898.jpg"
+            alt="Teens Summit Global team">
+        </div>
+
+    </div>
+
+    <div class="container hero-content">
+
+        <div class="eyebrow">
+            Empowering the Next Generation
+        </div>
+
+        <h1>
+            Raising Purpose-Driven, Transformational Teen Leaders
+        </h1>
+
+        <p>
+            We inspire young people to discover purpose, build character,
+            develop leadership skills and become positive agents of change
+            in their schools and communities.
+        </p>
+
+        <div class="hero-actions">
+            <a class="btn" href="#programmes">
+                Explore Our Programmes
+            </a>
+
+            <button class="btn teal" data-open-modal>
+                Join the Movement
+            </button>
+        </div>
+
+    </div>
+
+    <div class="dots" id="dots"></div>
+
+    <div class="slider-controls">
+        <button id="prev">‹</button>
+        <button id="next">›</button>
+    </div>
+
+</section>
+
+<!-- ==============================
+     TICKER
+================================ -->
+
+<div class="ticker">
+    <div class="container">
+        <span>
+            2026 ROADMAP • PURPOSE • LEADERSHIP • MENTORSHIP •
+            ENTREPRENEURSHIP • CHARACTER • SOCIAL TRANSFORMATION •
+            2026 ROADMAP •
+        </span>
+    </div>
+</div>
+
+<!-- ==============================
+     ABOUT US
+================================ -->
+
+<section class="about" id="about">
+
+    <div class="container about-panel">
+
+        <div>
+            <div class="eyebrow">Who We Are</div>
+
+            <h2>About Teens Summit Global</h2>
+
+            <p>
+                Teens Summit Global (TSG) is a youth-focused initiative
+                committed to helping teenagers become purposeful,
+                responsible, confident and transformational leaders.
+            </p>
+
+            <p>
+                Through practical workshops, mentorship, leadership
+                experiences and school-based programmes, we equip
+                young people with the mindset and tools to make
+                meaningful contributions to society.
+            </p>
+
+            <a class="btn teal" href="#mission">
+                Discover Our Mandate
+            </a>
+        </div>
+
+        <div class="about-visual">
+            <img src="assets/1000886898.jpg"
+            alt="Teens Summit Global team">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     OUR PILLARS
+================================ -->
+
+<section class="pillars">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">Our Foundation</div>
+            <h2>What We Build in Every Teen</h2>
+            <p>
+                Our work is shaped by practical values that help
+                young people thrive.
+            </p>
+        </div>
+
+        <div class="grid four">
+
+            <article class="card">
+                <div class="icon">✦</div>
+                <h3>Purpose</h3>
+                <p>
+                    Helping teens discover their identity,
+                    gifts and direction.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="icon">♜</div>
+                <h3>Leadership</h3>
+                <p>
+                    Developing responsible leaders who influence
+                    with integrity.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="icon">◎</div>
+                <h3>Character</h3>
+                <p>
+                    Building discipline, confidence, empathy
+                    and good choices.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="icon">↗</div>
+                <h3>Impact</h3>
+                <p>
+                    Encouraging students to serve and transform
+                    their communities.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     VISION AND MISSION
+================================ -->
+
+<section class="vision" id="mission">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">Our Mandate</div>
+            <h2>Vision & Mission</h2>
+            <p>
+                A clear purpose. A generation equipped to make a difference.
+            </p>
+        </div>
+
+        <div class="grid two">
+
+            <article class="card">
+                <h3>Our Vision</h3>
+                <p>
+                    To raise a generation of purpose-driven,
+                    transformational teen leaders who positively
+                    influence their schools, communities and the world.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Our Mission</h3>
+                <p>
+                    To inspire, educate and equip teenagers through
+                    leadership development, mentorship, values-based
+                    learning and transformative experiences.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+
+            <article class="card">
+                <h3>Core Objectives & Values</h3>
+                <p>
+                    Purpose • Integrity • Excellence • Service •
+                    Responsibility • Respect • Innovation • Empowerment.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Our SDG Commitment</h3>
+                <p>
+                    We support inclusive and equitable quality education
+                    (SDG 4) and gender equality and empowerment (SDG 5),
+                    creating opportunities for every teen to grow and lead.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     PROGRAMMES
+================================ -->
+
+<section id="programmes">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">What We Do</div>
+            <h2>Our Programmes</h2>
+            <p>
+                Experiences designed to turn potential into purposeful action.
+            </p>
+        </div>
+
+        <div class="grid four">
+
+            <article class="card programme-card">
+                <div class="programme-top">
+                    <div class="icon">★</div>
+                    <h3>Teens Summit Project</h3>
+                </div>
+                <div class="programme-bottom">
+                    <p>
+                        School-based summits that engage students
+                        in purpose, values, leadership and development.
+                    </p>
+                    <a href="#events">Learn more →</a>
+                </div>
+            </article>
+
+            <article class="card programme-card">
+                <div class="programme-top">
+                    <div class="icon">↗</div>
+                    <h3>Leaders in Pursuit</h3>
+                </div>
+                <div class="programme-bottom">
+                    <p>
+                        A growth journey for students committed to
+                        leadership, discipline and meaningful achievement.
+                    </p>
+                    <a href="#events">Learn more →</a>
+                </div>
+            </article>
+
+            <article class="card programme-card">
+                <div class="programme-top">
+                    <div class="icon">◎</div>
+                    <h3>Start Right Summit</h3>
+                </div>
+                <div class="programme-bottom">
+                    <p>
+                        Helping SHS 1 students begin their school
+                        journey with clarity, confidence and good choices.
+                    </p>
+                    <a href="#events">Learn more →</a>
+                </div>
+            </article>
+
+            <article class="card programme-card">
+                <div class="programme-top">
+                    <div class="icon">✧</div>
+                    <h3>Impact Boothcamp</h3>
+                </div>
+                <div class="programme-bottom">
+                    <p>
+                        An intensive experience in leadership,
+                        teamwork, entrepreneurship and social impact.
+                    </p>
+                    <a href="#events">Learn more →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <div style="text-align:center;margin-top:22px">
+            <button class="btn teal" data-open-modal>
+                Host TSG in Your School
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     EVENTS AND ROADMAP
+================================ -->
+
+<section class="roadmap" id="events">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">Our Journey</div>
+            <h2>2026 Roadmap & Events</h2>
+            <p>
+                Growing our reach, deepening our work and celebrating
+                student transformation.
+            </p>
+        </div>
+
+        <div class="grid four">
+
+            <div class="phase">
+                <strong>Phase 1</strong>
+                <h3>Connect & Prepare</h3>
+                <p>
+                    School engagement, planning and programme coordination.
+                </p>
+            </div>
+
+            <div class="phase">
+                <strong>Phase 2</strong>
+                <h3>Inspire & Equip</h3>
+                <p>
+                    Summits, workshops and mentorship sessions.
+                </p>
+            </div>
+
+            <div class="phase">
+                <strong>Phase 3</strong>
+                <h3>Practice & Impact</h3>
+                <p>
+                    Student projects, leadership activities and community action.
+                </p>
+            </div>
+
+            <div class="phase">
+                <strong>Phase 4</strong>
+                <h3>Reflect & Celebrate</h3>
+                <p>
+                    Recognition, learning, stories and programme review.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="grid three" style="margin-top:28px">
+
+            <article class="card">
+                <h3>Boothcamp</h3>
+                <p>Immersive learning and leadership development.</p>
+            </article>
+
+            <article class="card">
+                <h3>Summits & Conferences</h3>
+                <p>Gatherings that challenge and inspire young leaders.</p>
+            </article>
+
+            <article class="card">
+                <h3>Social Transformation Schemes</h3>
+                <p>Student-led initiatives that create positive change.</p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     IMPACT
+================================ -->
+
+<section id="impact">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">Stories That Matter</div>
+            <h2>Our Impact & Transformative Journey</h2>
+            <p>
+                Every student has a story. Every step forward matters.
+            </p>
+        </div>
+
+        <div class="grid three">
+
+            <div class="impact-stat">
+                <strong>Student Experience</strong>
+                <span>Learning, reflection and growth</span>
+            </div>
+
+            <div class="impact-stat">
+                <strong>Achievement</strong>
+                <span>Celebrating effort and progress</span>
+            </div>
+
+            <div class="impact-stat">
+                <strong>Transformation</strong>
+                <span>Purposeful action in communities</span>
+            </div>
+
+        </div>
+
+        <div class="grid two" style="margin-top:20px">
+
+            <div class="quote">
+                <p>
+                    “A powerful experience can help a young person
+                    see their future differently—and begin to take ownership of it.”
+                </p>
+                <strong>Programme Reflection</strong>
+            </div>
+
+            <div class="quote">
+                <p>
+                    “When students are encouraged, mentored and equipped,
+                    their confidence and leadership can grow.”
+                </p>
+                <strong>School Community Reflection</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     CALL TO ACTION
+================================ -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="eyebrow">Be Part of the Change</div>
+
+        <h2>Help Us Shape a Generation</h2>
+
+        <p>
+            Volunteer, mentor, speak, partner or support a programme.
+            Your contribution can help create opportunities for young
+            people to discover and develop their potential.
+        </p>
+
+        <button class="btn" data-open-modal>
+            Get Involved Today
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     NEWS AND EVENTS
+================================ -->
+
+<section id="news">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">Stay Connected</div>
+            <h2>News, Events & Resources</h2>
+            <p>Updates from our programmes, schools and community.</p>
+        </div>
+
+        <div class="grid three">
+
+            <article class="news-card">
+                <small>PROGRAMME HIGHLIGHT</small>
+                <h3>Mindshift at Akrofuom SHS</h3>
+                <p>
+                    Students engaged in a shared experience
+                    of reflection, learning and growth.
+                </p>
+            </article>
+
+            <article class="news-card">
+                <small>STUDENT ACHIEVEMENT</small>
+                <h3>Celebrating Student Excellence</h3>
+                <p>
+                    Recognising students and encouraging
+                    continued commitment to purpose.
+                </p>
+            </article>
+
+            <article class="news-card">
+                <small>EDUCATIONAL RESOURCE</small>
+                <h3>Tools for Teen Leadership</h3>
+                <p>
+                    Practical ideas for building confidence,
+                    character and positive influence.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="newsletter" style="margin-top:28px">
+
+            <div>
+                <h3>Subscribe to TSG Updates</h3>
+                <p>Receive programme announcements and educational resources.</p>
+            </div>
+
+            <form id="newsletterForm">
+                <input type="email" placeholder="Your email address" required>
+                <button class="btn teal" type="submit">Subscribe</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer id="contact">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="brand" style="color:white;margin-bottom:15px">
+
+                    <span class="brand-mark">🌍</span>
+
+                    <span class="brand-name">
+                        <strong>TEENS SUMMIT GLOBAL</strong>
+                        <small>INSPIRE. EDUCATE. IMPACT.</small>
+                    </span>
+
+                </div>
+
+                <p>
+                    Empowering teenagers to discover purpose,
+                    develop leadership and make a positive impact.
+                </p>
+
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="#about">About Us</a>
+                <a href="#programmes">Our Programmes</a>
+                <a href="#impact">Our Impact</a>
+                <a href="#events">Events</a>
+            </div>
+
+            <div>
+                <h3>Get Involved</h3>
+                <a href="#contact" data-open-modal>Volunteer</a>
+                <a href="#contact" data-open-modal>Become a Mentor</a>
+                <a href="#contact" data-open-modal>Partner with Us</a>
+                <a href="#contact" data-open-modal>Support a Programme</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>Email: info@teenssummitglobal.org</p>
+                <p>Follow our social media channels for updates.</p>
+                <a href="#home">Back to Top ↑</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> Teens Summit Global. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ==============================
+     REGISTRATION MODAL
+================================ -->
+
+<div class="modal" id="registrationModal">
+
+    <div class="modal-box">
+
+        <div class="modal-head">
+            <h2>Get Involved with TSG</h2>
+            <button id="closeModal">×</button>
+        </div>
+
+        <form class="form-grid" id="registrationForm">
+
+            <label>
+                Full Name
+                <input name="name" required placeholder="Your full name">
+            </label>
+
+            <label>
+                Email Address
+                <input type="email" name="email" required placeholder="you@example.com">
+            </label>
+
+            <label>
+                Role / Affiliation
+
+                <select name="role" required>
+                    <option value="">Select one</option>
+                    <option>Student</option>
+                    <option>Parent / Guardian</option>
+                    <option>Teacher / School</option>
+                    <option>Volunteer</option>
+                    <option>Mentor / Facilitator</option>
+                    <option>Partner / Supporter</option>
+                </select>
+            </label>
+
+            <label>
+                Programme of Interest
+
+                <select name="programme" required>
+                    <option value="">Select one</option>
+                    <option>Teens Summit Project</option>
+                    <option>Leaders in Pursuit</option>
+                    <option>Start Right Summit</option>
+                    <option>Impact Boothcamp</option>
+                    <option>Host TSG in my school</option>
+                    <option>General Support</option>
+                </select>
+            </label>
+
+            <button class="btn teal" type="submit">
+                Submit Interest
+            </button>
+
+            <p style="color:#7b8a94">
+                This demo form does not send or store submissions yet.
+                Connect it to a backend or email service before publishing.
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
+
+<script>
+
+/* HOMEPAGE SLIDER */
+
+const slides = [...document.querySelectorAll(".slide")];
+const dotsWrap = document.getElementById("dots");
+
+let current = 0;
+let timer;
+
+slides.forEach((slide, index) => {
+
+    const dot = document.createElement("button");
+
+    dot.setAttribute("aria-label", "Go to slide " + (index + 1));
+
+    dot.addEventListener("click", () => showSlide(index));
+
+    dotsWrap.appendChild(dot);
+
+});
+
+const dots = [...dotsWrap.children];
+
+function showSlide(index) {
+
+    current = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === current);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === current);
+    });
+
+    clearInterval(timer);
+
+    timer = setInterval(() => {
+        showSlide(current + 1);
+    }, 6000);
+
+}
+
+document.getElementById("next").addEventListener("click", () => {
+    showSlide(current + 1);
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+    showSlide(current - 1);
+});
+
+showSlide(0);
+
+
+/* MOBILE NAVIGATION */
+
+const nav = document.getElementById("mainNav");
+
+document.getElementById("menuBtn").addEventListener("click", () => {
+    nav.classList.toggle("open");
+});
+
+nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("open");
+    });
+});
+
+
+/* REGISTRATION MODAL */
+
+const modal = document.getElementById("registrationModal");
+
+document.querySelectorAll("[data-open-modal]").forEach(button => {
+
+    button.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        modal.classList.add("open");
+
+    });
+
+});
+
+document.getElementById("closeModal").addEventListener("click", () => {
+    modal.classList.remove("open");
+});
+
+modal.addEventListener("click", event => {
+
+    if (event.target === modal) {
+        modal.classList.remove("open");
+    }
+
+});
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+        modal.classList.remove("open");
+    }
+
+});
+
+
+/* NOTIFICATIONS */
+
+const toast = document.getElementById("toast");
+
+function notify(message) {
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3500);
+
+}
+
+
+/* REGISTRATION FORM */
+
+document.getElementById("registrationForm").addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    notify("Thank you for your interest in Teens Summit Global!");
+
+    modal.classList.remove("open");
+
+    event.target.reset();
+
+});
+
+
+/* NEWSLETTER */
+
+document.getElementById("newsletterForm").addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    notify("Thank you for subscribing!");
+
+    event.target.reset();
+
+});
+
+
+/* CURRENT YEAR */
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+  </html>
+  <img src="images/slide1.jpg">
+<img src="images/slide2.jpg">
+<img src="images/slide3.jpg">
+<img src="images/slide4.jpg">
+<img src="images/slide5.jpg">
+<img src="images/slide6.jpg">
